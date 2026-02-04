@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Contrato - S.A.E Strategies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1f2937;
+            color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #111827;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            border: 1px solid #374151;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0d1a1a 0%, #134e4a 50%, #0f766e 100%);
+            color: #f9fafb;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid #14b8a6;
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #14b8a6 0%, #22d3ee 100%);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0a0a0b;
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+            border: 3px solid #00ffdd;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 40px;
+            background: #111827;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #14b8a6;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-left: 4px solid #14b8a6;
+            padding-left: 15px;
+        }
+
+        .parties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .party {
+            padding: 20px;
+            border: 2px solid #374151;
+            border-radius: 12px;
+            background: #1f2937;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .party h3 {
+            color: #14b8a6;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border: 2px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .service-item:hover {
+            border-color: #14b8a6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+            background: linear-gradient(135deg, #0d1a1a 0%, #1f2937 100%);
+        }
+
+        .service-title {
+            color: #14b8a6;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .service-price {
+            color: #f9fafb;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .payment-options {
+            background: linear-gradient(135deg, #0d1a1a 0%, #1f2937 100%);
+            border: 2px solid #14b8a6;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+        }
+
+        .promo-box {
+            background: linear-gradient(135deg, #00e6cc 0%, #22d3ee 100%);
+            color: #0a0a0b;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 230, 204, 0.4);
+            border: 2px solid #00ffdd;
+        }
+
+        .promo-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .term-item {
+            background: #1f2937;
+            border-left: 4px solid #14b8a6;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #374151;
+        }
+
+        .signature-box {
+            text-align: center;
+        }
+
+        .signature-line {
+            border-top: 2px solid #f9fafb;
+            margin-top: 50px;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #0a0a0b;
+            color: #f9fafb;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            border-top: 2px solid #14b8a6;
+        }
+
+        .highlight {
+            color: #14b8a6;
+            font-weight: bold;
+        }
+
+        @media print {
+            body { 
+                background: #111827 !important; 
+                color: #f9fafb !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .container { 
+                box-shadow: none; 
+                background: #111827 !important;
+            }
+            .service-item:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="/Logo SAE 2.0.jpg" alt="Logo da S.A.E Strategies" width="150">
+            <h1>S.A.E STRATEGIES</h1>
+            <p>Soluções Digitais Estratégicas</p>
+            <div class="header-info">
+                <div>📌 PROPOSTA DE CONTRATO</div>
+                <div>Data: <span id="current-date"></span></div>
+                <div>Validade: 30 dias</div>
+            </div>
+        </img>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Parties Section -->
+            <div class="section">
+                <h2 class="section-title">1. IDENTIFICAÇÃO DAS PARTES</h2>
+                <div class="parties">
+                    <div class="party">
+                        <h3>🏢 CONTRATADA</h3>
+                        <p><strong>S.A.E STRATEGIES</strong></p>
+                        <p>CNPJ:___________________</p>
+                        <p>Endereço:_________________</p>
+                        <p>Cidade:__________________ </p>
+                        <p>Telefone:_________________</p>
+                        <p>E-mail: _____________________ </p>
+                        <p>Representante:___________________</p>
+                    </div>
+                    <div class="party">
+                        <h3>👤 CONTRATANTE</h3>
+                        <p><strong>Nome/Empresa:</strong> CTI Centro De Tratamento ao Idoso</p>
+                        <p><strong>CPF/CNPJ:</strong> 49.185.728/0001-24 </p>
+                        <p><strong>Endereço:</strong> Rua 1131 número 122 Centro- Balneário Camboriú</p>
+                        <p><strong>Cidade:</strong> paraná</p>
+                        <p><strong>Telefone:</strong> (45) 99990 - 7771</p>
+                        <p><strong>E-mail:</strong> rafaterapia.projeto@gmail.com</p>
+                        <p><strong>Representante:</strong> Rafael Pereira dos Santos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="section">
+                <h2 class="section-title">2. OBJETO DO CONTRATO - SERVIÇOS E VALORES</h2>
+                <p>Cada serviço pode ser contratado individualmente, com valores claros e ajustados:</p>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-title">💻 Website Institucional</div>
+                        <p>Até 3 páginas profissionais</p>
+                        <div class="service-price">R$ 1.200,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🌐 Website Profissional</div>
+                        <p>Até 7 páginas, SEO avançado</p>
+                        <div class="service-price">R$ 2.500,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">📊 Planilha Digital de Rotina</div>
+                        <p>Automatizada e personalizada</p>
+                        <div class="service-price">R$ 600,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🤖 Automação de Relatórios</div>
+                        <p>Relatórios avançados automatizados</p>
+                        <div class="service-price">R$ 1.700,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">📱 Aplicativo Web</div>
+                        <p>Portal da Família personalizado</p>
+                        <div class="service-price">R$ 2.200,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🎨 Identidade Visual Essencial</div>
+                        <p>Cartão digital + paleta personalizada</p>
+                        <div class="service-price">R$ 300,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🎨 Identidade Visual Completa</div>
+                        <p>Cartão digital/impresso + templates sociais</p>
+                        <div class="service-price">R$ 500,00</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🔧 Suporte Essencial</div>
+                        <p>Manutenção básica mensal</p>
+                        <div class="service-price">R$ 150,00/mês</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-title">🔧 Suporte Avançado</div>
+                        <p>Manutenção completa mensal</p>
+                        <div class="service-price">R$ 300,00/mês</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="section">
+                <h2 class="section-title">3. CONDIÇÕES DE PAGAMENTO</h2>
+                <div class="payment-options">
+                    <h3>💰 Pagamento da Implantação:</h3>
+                    <p>• <span class="highlight">À vista com 5% de desconto</span> <strong>OU</strong></p>
+                    <p>• <span class="highlight">Parcelado em até 4x sem juros</span> via PIX, boleto ou cartão</p>
+                    
+                    <h3 style="margin-top: 20px;">💳 Pagamento da Mensalidade:</h3>
+                    <p>• Vencimento fixo todo dia <strong>[DATA]</strong> do mês</p>
+                    <p>• Formas aceitas: PIX, boleto ou cartão de crédito recorrente</p>
+                    <p>• Multa de 2% + juros de 1% ao mês em caso de atraso</p>
+                </div>
+            </div>
+
+            <!-- Special Promotion -->
+            <div class="promo-box">
+                <h3>🎁 PROMOÇÃO ESPECIAL - PACOTE COMPLETO</h3>
+                <p>Se o cliente optar por contratar <strong>todos os serviços juntos</strong> (pacote completo), o valor final de implantação, que seria de <strong>R$ 7.500,00</strong>, terá um desconto exclusivo, saindo por apenas <strong>R$ 6.000,00</strong>.</p>
+                <p style="margin-top: 15px;">Além disso, o cliente recebe <strong>1 mês de Manutenção gratuita</strong> como bônus!</p>
+            </div>
+
+            <!-- Terms Section -->
+            <div class="section">
+                <h2 class="section-title">4. PRAZOS E CRONOGRAMA</h2>
+                <div class="terms-grid">
+                    <div class="term-item">
+                        <strong>⏰ Início dos Trabalhos:</strong><br>
+                        Até 5 dias úteis após confirmação do pagamento
+                    </div>
+                    <div class="term-item">
+                        <strong>🎯 Prazo de Execução:</strong><br>
+                        15 a 30 dias úteis (conforme complexidade)
+                    </div>
+                    <div class="term-item">
+                        <strong>📋 Entrega de Projetos:</strong><br>
+                        Apresentação para aprovação em até 3 revisões
+                    </div>
+                    <div class="term-item">
+                        <strong>🔄 Suporte Pós-Entrega:</strong><br>
+                        15 dias de garantia gratuita para ajustes
+                    </div>
+                </div>
+            </div>
+
+            <!-- Obligations Section -->
+            <div class="section">
+                <h2 class="section-title">5. OBRIGAÇÕES DAS PARTES</h2>
+                
+                <h3 style="color: #14b8a6; margin-bottom: 15px;">🏢 CONTRATADA (S.A.E Strategies):</h3>
+                <p>• Executar os serviços conforme especificações acordadas</p>
+                <p>• Manter sigilo sobre informações confidenciais do cliente</p>
+                <p>• Fornecer suporte técnico durante o período de garantia</p>
+                <p>• Entregar os projetos dentro dos prazos estabelecidos</p>
+                
+                <h3 style="color: #14b8a6; margin: 20px 0 15px 0;">👤 CONTRATANTE:</h3>
+                <p>• Fornecer todas as informações necessárias para execução</p>
+                <p>• Efetuar pagamentos nos prazos acordados</p>
+                <p>• Aprovar ou solicitar revisões em até 5 dias úteis</p>
+                <p>• Disponibilizar acesso a sistemas quando necessário</p>
+            </div>
+
+            <!-- General Terms -->
+            <div class="section">
+                <h2 class="section-title">6. CONDIÇÕES GERAIS</h2>
+                <div class="terms-grid">
+                    <div class="term-item">
+                        <strong>🚫 Cancelamento:</strong><br>
+                        Possível mediante comunicação com 30 dias de antecedência
+                    </div>
+                    <div class="term-item">
+                        <strong>🔒 Confidencialidade:</strong><br>
+                        Todas as informações serão mantidas em sigilo absoluto
+                    </div>
+                    <div class="term-item">
+                        <strong>⚖️ Legislação:</strong><br>
+                        Regida pelas leis brasileiras vigentes
+                    </div>
+                    <div class="term-item">
+                        <strong>🌪️ Força Maior:</strong><br>
+                        Eventos imprevistos suspendem obrigações temporariamente
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acceptance -->
+            <div class="section">
+                <h2 class="section-title">7. ACEITE DA PROPOSTA</h2>
+                <div class="payment-options">
+                    <p>Esta proposta tem validade de <strong>30 dias</strong> a partir da data de emissão.</p>
+                    <p>O aceite pode ser realizado através de:</p>
+                    <p>• Assinatura física desta proposta</p>
+                    <p>• Confirmação por e-mail com identificação das partes</p>
+                    <p>• Assinatura digital via plataforma acordada</p>
+                </div>
+            </div>
+
+            <!-- Signatures -->
+            <div class="signatures">
+                <div class="signature-box">
+                    <p><strong>CONTRATANTE</strong></p>
+                    <div class="signature-line">
+                        Nome: _________________________<br>
+                        CPF/CNPJ: _____________________<br>
+                        Data: ____/____/______
+                    </div>
+                </div>
+                <div class="signature-box">
+                    <p><strong>S.A.E STRATEGIES</strong></p>
+                    <div class="signature-line">
+                        Representante: _________________<br>
+                        CPF: __________________________<br>
+                        Data: ____/____/______
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>S.A.E STRATEGIES - Transformando ideias em soluções digitais estratégicas</p>
+            <p>www.saestrategies.com | contato@saestrategies.com | (85) 9999-9999</p>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('pt-BR');
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
+</body>
+</html>
